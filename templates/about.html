@@ -15,6 +15,8 @@
                 <li><a href="{{ url_for('about') }}" class="{{ 'active' if request.endpoint == 'about' }}">About</a></li>
                 <li><a href="{{ url_for('portfolio') }}" class="{{ 'active' if request.endpoint == 'portfolio' }}">Portfolio</a></li>
                 <li><a href="{{ url_for('contact') }}" class="{{ 'active' if request.endpoint == 'contact' }}">Contact</a></li>
+                <li><a href="{{ url_for('signin') }}" class="{{ 'active' if request.endpoint == 'signin' }}">Sign In</a></li>
+                <li><a href="{{ url_for('signup') }}" class="{{ 'active' if request.endpoint == 'signup' }}">Sign Up</a></li>
                 <!-- Add more navigation items as needed -->
             </ul>
         </nav>
