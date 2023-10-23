@@ -7,7 +7,7 @@ app = Flask(__name__)
 def render_and_save_template(template_name, filename):
     with app.app_context():
         template = render_template(template_name)
-        with open(os.path.join('build', filename), 'w', encoding='utf-8') as file:
+        with open(os.path.join('docs', filename), 'w', encoding='utf-8') as file:
             file.write(template)
 
 @app.route('/')
