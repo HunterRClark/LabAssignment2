@@ -1,0 +1,9 @@
+<footer>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('terms') }}" class="{{ 'active' if request.endpoint == 'terms' }}">Terms and Conditions</a></li>
+            <li><a href="{{ url_for('privacy') }}" class="{{ 'active' if request.endpoint == 'privacy' }}">Privacy Policy</a></li>
+            <li><a href="{{ url_for('cookie') }}" class="{{ 'active' if request.endpoint == 'cookie' }}">Cookie Policy</a></li>
+        </ul>
+    </nav>
+</footer>

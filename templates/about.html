@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | My Personal Website</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheet.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}" class="{{ 'active' if request.endpoint == 'home' }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}" class="{{ 'active' if request.endpoint == 'about' }}">About</a></li>
+                <li><a href="{{ url_for('portfolio') }}" class="{{ 'active' if request.endpoint == 'portfolio' }}">Portfolio</a></li>
+                <li><a href="{{ url_for('contact') }}" class="{{ 'active' if request.endpoint == 'contact' }}">Contact</a></li>
+                <li><a href="{{ url_for('signin') }}" class="{{ 'active' if request.endpoint == 'signin' }}">Sign In</a></li>
+                <li><a href="{{ url_for('signup') }}" class="{{ 'active' if request.endpoint == 'signup' }}">Sign Up</a></li>
+                <!-- Add more navigation items as needed -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>About Me</h1>
+            <p>I am Hunter R. Clark, an Aviation Programs Manager and Navy Veteran with an active Secret Security Clearance. With over 5 years of proven experience in training and procedures standardization for rotary wing operations, I have successfully managed and trained cross-functional teams of up to 30 diverse personnel.
+
+                My expertise extends to administrative processes, safety procedures, and regulations compliance, all while leveraging strong time management skills to complete high-risk tasks with meticulous attention to detail in fast-paced environments.
+                
+                During my military career, I played a crucial role in facilitating professional development training for qualifications/certifications, syllabus creation, and technology integration, all of which were vital to conducting domestic operations crucial to national security.
+                
+                One of my key accomplishments includes managing risk across multiple lines to protect assets, property, and equipment valued over $28 million, all while meeting the expectations of senior leadership.
+                
+                My educational background includes earning a Bachelor of Science in Mathematics in under 2 years at Boise State University with a GPA of 3.5. In addition to my academic achievements, I hold certifications in Seahawk Weapons and Tactics Instruction, Small Arms Instruction, Helicopter Aerial Door Gunner Instruction, NVD Form Crewman, Night Systems Instruction, and CRM Instruction.
+                
+                With a strong foundation in mathematics and hands-on experience in aviation operations, I am well-equipped to excel in challenging roles that require analytical thinking, leadership, and operational expertise.</p>
+        </section>
+    </main>
+
+    {% include 'footer.html' %}
+</body>
+</html>

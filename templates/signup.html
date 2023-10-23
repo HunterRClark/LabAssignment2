@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Coming Soon</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheet.css') }}">
+</head>
+<body>
+    <!-- Header Menu -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}" class="{{ 'active' if request.endpoint == 'home' }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}" class="{{ 'active' if request.endpoint == 'about' }}">About</a></li>
+                <li><a href="{{ url_for('portfolio') }}" class="{{ 'active' if request.endpoint == 'portfolio' }}">Portfolio</a></li>
+                <li><a href="{{ url_for('contact') }}" class="{{ 'active' if request.endpoint == 'contact' }}">Contact</a></li>
+                <li><a href="{{ url_for('signin') }}" class="{{ 'active' if request.endpoint == 'signin' }}">Sign In</a></li>
+                <li><a href="{{ url_for('signup') }}" class="{{ 'active' if request.endpoint == 'signup' }}">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Sign Up Page</h1>
+    <p>Coming Soon...</p>
+
+    {% include 'footer.html' %}
+</body>
+</html>
